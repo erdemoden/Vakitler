@@ -1,0 +1,22 @@
+{
+    "name":"ezan-vakti",
+    "version":"1.0.0",
+    "description":"Ezan Vakti App",
+    "manifest_version":3,
+    "author":"Erdem-Merve",
+    "action":{
+        "default_popup":"ezan.html",
+        "default_title":"Ezan Vakti"
+    }, 
+    "content_scripts": [
+        {
+            "matches":["<all_urls>"],
+            "js":["content.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+    ,"permissions": ["activeTab", "storage", "scripting"],
+    "host_permissions": ["<all_urls>"]
+}
